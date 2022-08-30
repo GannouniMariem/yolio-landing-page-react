@@ -1,0 +1,66 @@
+
+
+$dark:#0E0F19;
+$light-dark:rgba(14,15,25,0.5);
+$gray:#D9D9D9;
+$white:#EBEBED;
+
+$font:'Poppins', sans-serif;
+
+
+
+*,
+::after,::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: $font;
+    background-color:$white !important;
+    line-height: 1.6;
+    overflow-x: hidden !important;
+    font-size: calc(15px + 0.5vw);
+    
+   
+   }
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+br{
+    display: none;
+}
+
+input{
+
+    border: none;
+    padding:18px 15px;
+    width: 68%;
+  
+    font-size: 16px;
+    background-color: $gray;
+    border-radius:10px;
+    transition: all .2s ease-in-out;
+
+    
+
+}
+
+input:focus{
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+input::placeholder{
+    color: rgba(0, 0,0,.2);
+}
+

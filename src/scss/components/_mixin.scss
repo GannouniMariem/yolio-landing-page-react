@@ -1,0 +1,24 @@
+@mixin absoluteCenter{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+
+
+@mixin textStyle($font-weight,$font-size,$text-transform,$color){
+    font-weight: $font-weight;
+    font-size: $font-size;
+    text-transform: $text-transform;
+    color: $color;
+}
+
+@mixin shape($top,$right,$R) {
+  width:50px;
+  height: 60px;
+  top: $top;
+  right:$right;
+  position: absolute;
+  transform: rotate($R);
+}

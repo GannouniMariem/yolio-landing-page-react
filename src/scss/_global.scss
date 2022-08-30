@@ -1,0 +1,192 @@
+@use './components/custom' as *;
+@use './components/mixin' as *;
+
+
+
+.bg-shape{
+    svg{
+        position: absolute;
+        top: 0;
+        left: -50px;
+        max-width: 100vw;
+        height: 100%;
+        z-index: -9999;
+    }
+}
+
+.logo{
+    width: 70px;
+}
+
+.text-section{
+    @media (max-width: 992px) { 
+        text-align: center;
+        br{
+            display: block;
+        }
+    }
+    p:first-child{
+        
+        @include textStyle(500,calc(15px + 1vmax),none,$dark);
+        
+        span{
+            @include textStyle(900,calc(15px + 3vmin),uppercase,$dark)
+        }
+    }
+
+    p:nth-child(2){
+        @include textStyle(900,calc(15px + 2.2vw),uppercase,$dark)
+    }
+
+    .input{
+        
+        .signin{
+            background-color: $dark;
+            color: $white;
+            font-weight: 700;
+            font-weight: 500;
+            width: 110px;
+            height: 60px;
+            border-radius: 10px;
+            margin-left: -55px;
+            position: relative;
+           
+            vertical-align:baseline !important;
+
+
+            &--front{
+                @include absoluteCenter;
+                transition: all .3s ease-in-out;
+                opacity: 1;
+
+            }
+
+            &--back{
+                position: absolute;
+                left: 0;
+                transform: translateY(35px);
+                width: 100%;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+            }
+            
+            
+            .rainbow{
+                position: absolute;
+                left: 5px;
+                right: 0;
+                margin: auto;
+                top: -30px;
+                transition: 0.2s ease-in-out;
+                opacity: 0;
+                transform: rotate(35deg);
+                &:before {
+                    content: "🌈";
+                    left: 0;
+                }
+            }
+            
+            &:hover .rainbow {
+                opacity: 1;
+                animation: rotate-nonstop 0.2s infinite;
+            }
+            
+        }
+
+        .active .signin--front{
+            top: 0;
+            opacity: 0;
+        }
+
+        .active .signin--back{
+            transform: translateY(-50%);
+            opacity: 1;
+        }
+      
+    }
+}
+
+
+.video-box{
+    position: relative;
+    width: 90%;
+    height: 95%;
+    @media (max-width: 992px) { 
+        width: 100%;
+        height: 100%;
+        margin-right: 0;
+        border-right:  10px solid $dark;
+    }
+
+    border: 10px solid $dark;
+    border-right: 0;
+    border-radius: 20px;
+    padding: 15px;
+    margin-right: -25px;
+
+    img{
+        border-radius: 10px;
+        
+    }
+
+    a{
+        display: inline-block;
+        @include absoluteCenter;
+
+        
+        span{
+            i{
+                font-size: 4rem;
+                color: $white;
+            }
+        }
+    }
+    .video-icon{
+        background-color: $dark !important;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        @include absoluteCenter;
+
+        svg{
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    
+    }
+    .border-animation{
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 7rem;
+        height: 7rem;
+        border: 0.55rem solid $dark;
+        border-radius: 50%;
+    
+        animation: pulse-border 1.5s linear infinite;
+    
+        &--border-1{
+            animation-delay:1.5s;
+        }
+        &--border-2{
+            animation-delay: 1s;
+        }
+    
+    
+    }
+}
+
+footer {
+    background-color: $dark;
+    width: 100vw;
+
+    .text-muted{
+        color: $white;
+    }
+    @media (min-width: 992px) { 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    }
+}
