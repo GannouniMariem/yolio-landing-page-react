@@ -78,11 +78,11 @@ function App() {
     <footer className="container-fluid pt-2 mt-1">
         <div className="row ">
             <div className="col-lg-6 col-md-12 px-lg-5 text-center text-lg-start">
-                <small className="  text-light">Copyright <i className="uil uil-copyright"></i>2022 . Made with 🤍 . Powered by Yolio</small>
+                <small className="text-light fs-6">Copyright <i className="uil uil-copyright"></i>2022 . Made with 🤍 . Powered by Yolio</small>
 
             </div>
             <div className="col-lg-6 col-md-12 px-lg-5 d-flex justify-content-lg-end justify-content-center">
-                <p className="text-light text-white"> Follow us:
+                <p className=" fs-6 text-light text-white"> Follow us:
                     <span >
                         <a href="https://www.facebook.com/official.yolio/?ref=pages_you_manage" target="_blank"><i className="uil uil-facebook text-white   mx-1 "></i></a>
                         <a href="https://www.instagram.com/yolio_official/"><i className="uil uil-instagram-alt  text-white mx-1"></i></a>
