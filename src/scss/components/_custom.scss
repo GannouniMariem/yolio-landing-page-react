@@ -4,6 +4,7 @@ $dark:#0E0F19;
 $light-dark:rgba(14,15,25,0.5);
 $gray:#D9D9D9;
 $white:#EBEBED;
+$purple: #4440E6;
 
 $font:'Poppins', sans-serif;
 
@@ -17,13 +18,32 @@ $font:'Poppins', sans-serif;
 }
 
 body{
-    font-family: $font;
-    background-color:$white !important;
+    background-image:url('../assets/images/bg-event.png') !important;
+    background-repeat: no-repeat;
+     background-size: auto 119%;
     line-height: 1.6;
     overflow-x: hidden !important;
+    font-family: $font;
     font-size: calc(15px + 0.5vw);
-    
-   
+    color: $white;
+
+    @media (max-width: 700px) { 
+        
+    }
+
+    @media (min-width: 1200px) { 
+        background-size: 118% auto;
+    }
+
+    @media (min-width: 1400px) { 
+        background-position: center;
+        background-size: 150% auto;
+    }
+
+    @media (min-width: 1450px) { 
+        background-position: center;
+        background-size: cover;
+    }
    }
 
 a{
@@ -34,7 +54,7 @@ img{
     width: 100%;
     height: 100%;
     max-height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 br{
@@ -44,11 +64,12 @@ br{
 input{
 
     border: none;
-    padding:18px 15px;
-    width: 68%;
-  
+    padding:19px 15px;
+    width: 60%;
     font-size: 16px;
-    background-color: $gray;
+    overflow: hidden !important;
+    background-color: rgba($color: $white, $alpha: 0.7);
+    border: 5.26257px solid $white;
     border-radius:10px;
     transition: all .2s ease-in-out;
 
@@ -61,6 +82,8 @@ input:focus{
     transition: all .2s ease-in-out;
 }
 input::placeholder{
-    color: rgba(0, 0,0,.2);
+    color:$white;
+    font-weight: 400;
+    font-size: 20.0783px;
 }
 
